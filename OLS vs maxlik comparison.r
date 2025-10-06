@@ -17,7 +17,7 @@ colnames(X) <- c("Constant", "x1")
 beta_ols_closed  <- solve(t(X) %*% X) %*% t(X) %*% y                            # Obtain OLS estimates with matrix form
 resid_ols        <- y - X %*% beta_ols_closed                                   # Obtain OLS residuals
 sigma_mle_closed <- sqrt(sum(resid_ols^2) / (n-1))                              # Construct sigma estimate
-
+log(sigma_mle_closed)
 # OLS coefficients and sigma in a table
 ols_results <- data.frame(
   Variable = c(colnames(X), "sigma"),
@@ -86,4 +86,5 @@ lm.model <- lm(y ~ x)
 summary(lm.model)
 
 #===============================================================================
+
 
