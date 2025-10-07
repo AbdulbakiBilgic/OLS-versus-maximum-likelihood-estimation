@@ -98,7 +98,7 @@ result <- ml_regression(data,
                         yvar  = yvar, 
                         xvars = xvars, 
                         method= "BFGS",
-                        start_fraction = 0.05,                                  # change the start_fraction as you wish (usually between 0 and 1)
+                        start_fraction = 0.05,                                  # Change start_fraction freely, or set it to 1 if you want OLS estimates as starting values
                         print.level    = 3)
 print(result)
 #===============================================================================
@@ -109,3 +109,4 @@ summary(ols_fit)
 #===============================================================================
 
 #===============================================================================
+
