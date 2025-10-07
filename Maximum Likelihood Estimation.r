@@ -87,7 +87,7 @@ data <- data.frame(
 )
 data$y <- 1 + 0.5 * data$X1 - 0.7 * data$X2 + rnorm(n, sd = 1)
 # Get some diagnostics about your data:
-print(psych::describe(data))                                                    # get your descriptive statistics (pay attention to mean and sd of y)
+print(psych::describe(data))                                                    # get your descriptive statistics (pay attention to the mean and sd of y)
 cor_matrix <- cor(data)                                                         # get information about correlations among all variables
 print(round(cor_matrix, 3))
 #===============================================================================
@@ -107,4 +107,5 @@ ols_fit  <- lm(y ~ ., data = data)
 print("lm() summary:")
 summary(ols_fit)
 #===============================================================================
+
 #===============================================================================
