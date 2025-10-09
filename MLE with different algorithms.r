@@ -98,7 +98,7 @@ mle_with_different_algorithms <- function(data,
     return(H_new)
   }
   
-  # Line search function (Armijo rule)
+  # Line search function
   line_search <- function(theta, direction, grad, ll_current, alpha = 1, beta = 0.5, sigma = 1e-4) {
     # Armijo condition: f(θ + αd) ≥ f(θ) + σαg'd
     max_ls_iter <- 20
@@ -457,4 +457,5 @@ data <- data.frame(
 )
 data$y  <- 1 + 0.5 * data$X1 - 0.7 * data$X2 + rnorm(n, sd = 1)
 summary(lm(y ~ X1 + X2, data = data))
+
 # *********************************************************************************************************
